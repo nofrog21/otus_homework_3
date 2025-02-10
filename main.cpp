@@ -36,7 +36,7 @@ struct my_pool_allocator
     void construct(U *p, Args &&...args)
     {
         new (p) U(std::forward<Args>(args)...);
-    };
+    }
 
     template <typename U>
     void destroy(U *p)
